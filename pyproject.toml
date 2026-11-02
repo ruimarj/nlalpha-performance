@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nlalpha_performance"
+version = "0.6.0"
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+description = "Performance analytics capability provider for NLAlpha"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "nlalpha-core>=0.7.0",
+    "empyrical-reloaded==0.5.12",
+    "numpy>=2,<3",
+    "pandas>=2.3,<3",
+]
+
+[project.entry-points."nlalpha.capabilities"]
+performance = "nlalpha_performance:PerformancePlugin"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nlalpha_performance"]
