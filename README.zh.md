@@ -45,3 +45,11 @@ summary 的计数、正收益比例、best/worst/current 以有效已观测桶�
 Empyrical 0.4.0 共享 tracker 手算核验通过：月/年独立端点、UTC 边界 ±1ns、闰年/缺期、有效周期分母、非正参考权益、溢出转 null、finish 稳定性，以及 signed-i64 极值的 i128 日历边界和 JSON 精确转换。离线 lock 与本地包构建检查通过。这是针对性核验，不是完整 suite 或基准重测。
 
 `PeriodReturnsTracker` 接受 `analysis_timezone`（默认 `UTC`），按 UTC 纳秒排序的观测值归入该时区当地公历边界。Python 与 Rust 使用 Core 中相同固定 TZIF 数据。报告时间和边界仍为 UTC ns；诊断记录时区库身份/哈希，歧义或不存在的月初本地时刻会明确失败。该配置只改变统计日历，不改变源时间解释和事件执行。
+
+## 公共依赖核验
+
+一个隔离的 CPython 3.12.13 环境使用公开的 `empyrical-reloaded` 0.5.12、NumPy 2.5.4 与 pandas 2.3.3，在 1.33 秒内通过 6 项测试和 13 项子测试。父级核对确认六项指标输出符合独立数学预期。workspace lock 更新仍在进行；该针对性结果不代表官方 lock 或所有受支持环境均已验证。
+
+## 许可证
+
+AGPL-3.0-or-later 下的社区分发。适用于 NLAlpha 适配包；empyrical-reloaded 及其他第三方依赖保留各自许可证。
