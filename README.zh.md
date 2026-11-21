@@ -52,4 +52,6 @@ Empyrical 0.4.0 共享 tracker 手算核验通过：月/年独立端点、UTC �
 
 ## 许可证
 
+版权所有 (c) 2026 Rui Ma。以 AGPL-3.0-or-later 授权，详见 [LICENSE](LICENSE)。
+
 AGPL-3.0-or-later 下的社区分发。适用于 NLAlpha 适配包；empyrical-reloaded 及其他第三方依赖保留各自许可证。

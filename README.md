@@ -53,4 +53,6 @@ An isolated CPython 3.12.13 environment using public `empyrical-reloaded` 0.5.12
 
 ## License
 
+Copyright (c) 2026 Rui Ma. Licensed under AGPL-3.0-or-later; see [LICENSE](LICENSE).
+
 Community distribution under AGPL-3.0-or-later. This applies to the NLAlpha adapter package; empyrical-reloaded and other third-party dependencies retain their own licenses.

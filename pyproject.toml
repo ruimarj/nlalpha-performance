@@ -7,8 +7,14 @@ name = "nlalpha_performance"
 version = "0.6.0"
 readme = "README.md"
 license = "AGPL-3.0-or-later"
-license-files = ["LICENSE"]
+license-files = ["LICENSE", "NOTICE"]
+classifiers = [
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
 description = "Performance analytics capability provider for NLAlpha"
+authors = [{ name = "Rui Ma" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "nlalpha-core>=0.7.0",
@@ -16,6 +22,11 @@ dependencies = [
     "numpy>=2,<3",
     "pandas>=2.3,<3",
 ]
+
+[project.urls]
+Homepage = "https://github.com/ruimarj/nlalpha-performance"
+Repository = "https://github.com/ruimarj/nlalpha-performance"
+Issues = "https://github.com/ruimarj/nlalpha-performance/issues"
 
 [project.entry-points."nlalpha.capabilities"]
 performance = "nlalpha_performance:PerformancePlugin"
